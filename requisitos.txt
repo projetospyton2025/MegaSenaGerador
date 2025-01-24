@@ -1,0 +1,12 @@
+MSOrdemSorteio/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── img/
+├── templates/
+│   └── index.html
+├── requirements.txt
+├── app.py
+└── MSOrdemSorteio.ps1

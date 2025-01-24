@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSOrdemSorteio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>MSOrdemSorteio</h1>
+        
+        <div class="controls">
+            <button id="generateSingle" class="btn">Gerar Jogo</button>
+            <input type="number" id="gamesCount" min="1" max="100" value="3">
+        </div>
+
+        <div class="download-controls">
+            <button id="downloadTxt" class="btn download-btn">Download TXT</button>
+            <button id="downloadXlsx" class="btn download-btn">Download XLSX</button>
+        </div>
+
+        <div class="tables-container">
+            <div class="table-section">
+                <h2>Ordem de Sorteio</h2>
+                <table id="drawTable">
+                    <thead>
+                        <tr>
+                            <th>Jogo</th>
+                            <th>col1</th>
+                            <th>col2</th>
+                            <th>col3</th>
+                            <th>col4</th>
+                            <th>col5</th>
+                            <th>col6</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="info">Col 1: 1-55 | Col 2: 1-56 | Col 3: 1-57 | Col 4: 1-58 | Col 5: 1-59 | Col 6: 1-60</div>
+            </div>
+
+            <div class="table-section">
+                <h2>Ordem Crescente</h2>
+                <table id="sortedTable">
+                    <thead>
+                        <tr>
+                            <th>Jogo</th>
+                            <th>Números</th>
+                            <th>
+                                <p class="blue">Pares</p>
+                                <div class="number-select">
+                                    <select id="evenCount" class="count-select">
+                                        <option value="">Auto</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th>
+                                <p class="red">Ímpares</p>
+                                <div class="number-select">
+                                    <select id="oddCount" class="count-select">
+                                        <option value="">Auto</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </th>
+                        </tr>
+                    <tr>
+                        <th colspan="4" class="info-header">
+                            <small>* Selecione a quantidade desejada de números pares e ímpares (opcional)</small>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div><br /><br />
+
+
+<p class="red">ARRUMAR: logica Download e Pares e ìmpares</p>
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
