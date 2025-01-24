@@ -79,6 +79,34 @@ input[type="number"] {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.stats-section {
+    margin-bottom: 1.5rem;
+}
+
+.stats-section h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats-table {
+    width: auto;
+    margin: 0 auto;
+    background: #f8f9fa;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stats-table td {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.stats-table td:first-child {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -117,7 +145,7 @@ td {
 .even { color: blue; }
 .odd { color: red; }
 .blue { color: blue; text-align: center; }
-.red { color: red; text-align: center;}
+.red { color: red; text-align: center; }
 
 .number-select {
     margin-top: 0.5rem;
@@ -128,6 +156,73 @@ td {
     border: 1px solid white;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+}
+
+.select-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.select-group label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.select-info {
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.parity-selects {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.controls-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.historic-stats {
+    display: flex;
+    align-items: center;
+}
+
+.stat-card {
+    background: white;
+    padding: 0.75rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 0.85rem;
+}
+
+.stat-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.stat-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.freq-info {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
     font-size: 0.8rem;
 }
 
@@ -183,6 +278,11 @@ td {
 
     input[type="number"] {
         width: 100%;
+    }
+    
+    .parity-selects {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

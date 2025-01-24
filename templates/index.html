@@ -15,9 +15,26 @@
             <input type="number" id="gamesCount" min="1" max="100" value="3">
         </div>
 
-        <div class="download-controls">
-            <button id="downloadTxt" class="btn download-btn">Download TXT</button>
-            <button id="downloadXlsx" class="btn download-btn">Download XLSX</button>
+        <div class="controls-wrapper">
+            <div class="download-controls">
+                <button id="downloadTxt" class="btn download-btn">Download TXT</button>
+                <button id="downloadXlsx" class="btn download-btn">Download XLSX</button>
+            </div>
+            
+            <div class="historic-stats">
+                <div class="stat-card">
+                    <h4>Estatísticas Pares e ìmpares</h4>
+                    <div class="stat-row">
+                        <span>Pares: <strong id="totalEven">-</strong></span>
+                        <span>(<strong id="evenPercentage">-%</strong>)</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Ímpares: <strong id="totalOdd">-</strong></span>
+                        <span>(<strong id="oddPercentage">-%</strong>)</span>
+                    </div>
+                    <small class="freq-info">Mais frequente: <span id="mostFrequent"></span></small>
+                </div>
+            </div>
         </div>
 
         <div class="tables-container">
@@ -88,9 +105,7 @@
         </div>
     </div><br /><br />
 
-
-<p class="red">ARRUMAR: logica Download e Pares e ìmpares</p>
-
+    <p class="red">ARRUMAR: logica Download e nos selects Pares e Ímpares</p>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
