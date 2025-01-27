@@ -143,3 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+//ALTERA A CLASSE DAS PALAVRAS DINAMICAMENTE
+document.querySelectorAll('.type').forEach((element) => {
+    const text = element.textContent.trim().toLowerCase(); // Normaliza o texto
+    if (text === 'pares') {
+        element.className = 'type blue'; // Adiciona a classe azul
+    } else if (text === 'ímpares') {
+        element.className = 'type red'; // Adiciona a classe vermelha
+    } else {
+        element.className = 'type default'; // Classe padrão, se necessário
+    }
+});

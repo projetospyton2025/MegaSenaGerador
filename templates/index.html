@@ -8,11 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>MSOrdemSorteio</h1>
+        <h1>Gerador de Jogos - Mega Sena <small>(Ordem Sorteio)</small></h1>
         
+        <div class="instrucaoes">
+            <h2>Instruções de uso:</h2>
+            <ol>
+                <li>Na seção "Ordem Crescente" defina o numero de <span class="type">Pares</span> e <span class="type">Ímpares</span>.</li>
+                <li>Selecione a quandidade de jogos para gerar.</li>
+                <li>Clique no botão "Gerar Jogos".</li>
+                <li>Faça o downlod dos jogos (opcional).</li>
+            </ol>
+        </div><br />
+
         <div class="controls">
             <button id="generateSingle" class="btn">Gerar Jogo</button>
-            <input type="number" id="gamesCount" min="1" max="100" value="3">
+            <p>Quantidade de jogos <small>( 10 mil )</small></p>
+            <input type="number" id="gamesCount" min="1" max="10000" value="3">
         </div>
 
         <div class="controls-wrapper">
@@ -23,13 +34,13 @@
             
             <div class="historic-stats">
                 <div class="stat-card">
-                    <h4>Estatísticas Pares e ìmpares</h4>
+                    <h4>Estatísticas <span class="type">Pares</span> e <span class="type">Ímpares</span></h4>
                     <div class="stat-row">
-                        <span>Pares: <strong id="totalEven">-</strong></span>
+                        <span class="type">Pares</span> <strong id="totalEven">-</strong></span>
                         <span>(<strong id="evenPercentage">-%</strong>)</span>
                     </div>
                     <div class="stat-row">
-                        <span>Ímpares: <strong id="totalOdd">-</strong></span>
+                        <span class="type">Ímpares</span> <strong id="totalOdd">-</strong>
                         <span>(<strong id="oddPercentage">-%</strong>)</span>
                     </div>
                     <small class="freq-info">Mais frequente: <span id="mostFrequent"></span></small>
@@ -65,7 +76,7 @@
                             <th>Jogo</th>
                             <th>Números</th>
                             <th>
-                                <p class="blue">Pares</p>
+                                <p class="type">Pares</p>
                                 <div class="number-select">
                                     <select id="evenCount" class="count-select">
                                         <option value="">Auto</option>
@@ -79,7 +90,7 @@
                                 </div>
                             </th>
                             <th>
-                                <p class="red">Ímpares</p>
+                                <p class="type">Ímpares</p>
                                 <div class="number-select">
                                     <select id="oddCount" class="count-select">
                                         <option value="">Auto</option>
@@ -95,7 +106,7 @@
                         </tr>
                     <tr>
                         <th colspan="4" class="info-header">
-                            <small>* Selecione a quantidade desejada de números pares e ímpares (opcional)</small>
+                            <small>* Obrigatório selecionar a quandidades de numeros.</small>
                         </th>
                     </tr>
                     </thead>
@@ -104,9 +115,6 @@
             </div>
         </div>
     </div><br /><br />
-
-    <p class="red">ARRUMAR: logica Download e nos selects Pares e Ímpares</p>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
+   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
 </html>
